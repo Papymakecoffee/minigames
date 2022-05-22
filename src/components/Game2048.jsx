@@ -1,15 +1,18 @@
 import React, {useCallback, useEffect, useState} from "react";
 
+// Renvoie un entier entre 0 et max
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
 
+// Copie un array d'arrays
 function copyArray(currentArray) {
   return currentArray.map(function (arr) {
     return arr.slice();
   });
 }
 
+// Sélectionne une case aléatoire parmi les cases disponibles d'une grille 4x4
 function getRandomAvailableTile(grid) {
   const availableTiles = [];
   for (let i = 0; i < 4; i++) {
