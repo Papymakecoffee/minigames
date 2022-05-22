@@ -1,13 +1,156 @@
-body {
+*,
+::before,
+::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: Montserrat, Helvetica, sans-serif;
+}
+
+.container {
+  transform: translateY(0vh);
+  transition: transform ease-in-out 800ms;
+}
+
+.game-container {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-container .game {
+  position: relative;
+  flex-grow: 1;
+}
+
+.game-footer {
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.arrow {
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.arrow-inverted {
+  transform: rotate(180deg);
+}
+
+.arrow-hidden {
+  visibility: hidden;
+}
+
+.container-2048 {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 15px;
+  grid-auto-rows: minmax(100px, auto);
+  background-color: #bbada0;
+  border-radius: 10px;
+  width: 400px;
+  height: 400px;
+  padding: 15px;
+}
+
+.tileContainer {
+  background-color: rgba(238, 228, 218, 0.35);
+  border-radius: 6px;
+  color: #776e65;
+  overflow: hidden;
+}
+
+.tile {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 40px;
+}
+
+.tileInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-weight: bold;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.tile-2 {
+  background-color: #eee4da;
+}
+.tile-4 {
+  background-color: #ede0c8;
+}
+.tile-8 {
+  color: #f9f6f2;
+  background: #f2b179;
+}
+.tile-16 {
+  color: #f9f6f2;
+  background: #f59563;
+}
+.tile-32 {
+  color: #f9f6f2;
+  background: #f67c5f;
+}
+.tile-64 {
+  color: #f9f6f2;
+  background: #f65e3b;
+}
+.tile-128 {
+  color: #f9f6f2;
+  background: #edcf72;
+  font-size: 36px;
+}
+.tile-256 {
+  color: #f9f6f2;
+  background: #edcc61;
+  font-size: 36px;
+}
+.tile-512 {
+  color: #f9f6f2;
+  background: #edc850;
+  font-size: 36px;
+}
+.tile-1024 {
+  color: #f9f6f2;
+  background: #edc53f;
+  font-size: 30px;
+}
+.tile-2048 {
+  color: #f9f6f2;
+  background: #edc22e;
+  font-size: 30px;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
