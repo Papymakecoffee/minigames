@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/minigames/static/css/main.0cded79b.css",
+    "main.js": "/minigames/static/js/main.98c90c16.js",
+    "static/media/arrow.svg": "/minigames/static/media/arrow.31621762795ecf2272e4ccc2785860f6.svg",
+    "index.html": "/minigames/index.html",
+    "main.0cded79b.css.map": "/minigames/static/css/main.0cded79b.css.map",
+    "main.98c90c16.js.map": "/minigames/static/js/main.98c90c16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0cded79b.css",
+    "static/js/main.98c90c16.js"
+  ]
+}
