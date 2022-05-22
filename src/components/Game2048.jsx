@@ -140,6 +140,7 @@ export default function Game2048() {
     setGrid(newGrid);
   }, [grid]);
 
+  // Game is played with keyboard arrows
   const handleKeyDown = useCallback(
     (event) => {
       const code = event.keyCode;
